@@ -1,0 +1,18 @@
+Installation steps for MQTT on Beagle Bone black:
+1. Add repository for mosquitto in sources.list
+	sudo vim /etc/apt/sources.list
+
+	deb http://httpredir.debian.org/debian stretch main contrib non-free
+
+2. Update repository
+	sudo apt-get update
+
+3. Install mosquitto broker
+	sudo apt-get install mosquitto
+
+4. Install mosquitto clients
+	sudo apt-get install mosquitto-clients
+
+5. For testing, open two terminals and give following commands
+	mosquitto_sub -h localhost -t "test"
+	mosquitto_pub -h localhost -t "test" -m "Hello Sunbeam"
